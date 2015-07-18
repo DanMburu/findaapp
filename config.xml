@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.myfinda" 
+	   versionCode= "15"
+       version = "1.0.0">
+		
+    <name>MyFinda</name>
+
+    <description>
+	MyFinda
+    </description>
+
+    <author href="http:creativeyr.co.ke" email="d.mburu@creative.co.ke">
+        Blue Antelope
+    </author>
+    
+    <access origin="*" />
+	
+	
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	<feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+   </feature>
+    <preference name="orientation"      value="default" />
+    <preference name="target-device"    value="universal" />
+    <preference name="fullscreen"       value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <icon src="icon.png" />
+    <icon src="themes/images/icon-36.png"   gap:platform="android"    gap:density="ldpi" />
+    <icon src="themes/images/icon-48.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="themes/images/icon-72.png"   gap:platform="android"    gap:density="hdpi" />
+    <icon src="themes/images/icon-96.png"  gap:platform="android"    gap:density="xhdpi" />
+
+  <!--
+  <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.8.1" />
+  <gap:plugin name="com.footprint.cordova.plugin.local-notification" version="0.8.0" />-->
+</widget>
