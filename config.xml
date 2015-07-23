@@ -31,8 +31,12 @@
     <icon src="themes/images/icon-48.png"   gap:platform="android"    gap:density="mdpi" />
     <icon src="themes/images/icon-72.png"   gap:platform="android"    gap:density="hdpi" />
     <icon src="themes/images/icon-96.png"  gap:platform="android"    gap:density="xhdpi" />
+	
+	<gap:plugin name="org.apache.cordova.geolocation" version="0.3.7" />
+	
+ <!--	
     <gap:plugin name="com.yongsun.cordova.geolocation" version="0.3.12" />
-  <!--
+ 
   <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.8.1" />
   <gap:plugin name="com.footprint.cordova.plugin.local-notification" version="0.8.0" />-->
 </widget>

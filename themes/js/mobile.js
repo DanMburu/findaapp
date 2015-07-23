@@ -7,8 +7,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
 alert('ready');
+ // navigator.geolocation.getCurrentPosition(onSuccess, onError);
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
-
    db = window.openDatabase("MyFinda", "1.0", "PhoneGap Demo", 200000);
     
 	var firstrun = window.localStorage.getItem("runned");
@@ -35,8 +35,6 @@ navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	
 	
 }
-
-
 // onSuccess Callback
 // This method accepts a Position object, which contains the
 // current GPS coordinates
@@ -60,6 +58,51 @@ function onError(error) {
 }
 
 
+
+
+// onSuccess Callback
+//   This method accepts a `Position` object, which contains
+//   the current GPS coordinates
+//
+function onSuccess2(position) {
+    var element = document.getElementById('geolocation');
+	alert('Latitude: '  + position.coords.latitude);
+    element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
+                        'Longitude: ' + position.coords.longitude     + '<br />' +
+                        '<hr />'      + element.innerHTML;
+}
+
+// onError Callback receives a PositionError object
+//
+
+// Options: throw an error if no update is received every 30 seconds.
+//
+var watchID = navigator.geolocation.watchPosition(onSuccess2, onError, { timeout: 30000 });
+
+/*
+// onSuccess Callback
+// This method accepts a Position object, which contains the
+// current GPS coordinates
+//
+var onSuccess = function(position) {
+    alert('Latitude: '          + position.coords.latitude          + '\n' +
+          'Longitude: '         + position.coords.longitude         + '\n' +
+          'Altitude: '          + position.coords.altitude          + '\n' +
+          'Accuracy: '          + position.coords.accuracy          + '\n' +
+          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+          'Heading: '           + position.coords.heading           + '\n' +
+          'Speed: '             + position.coords.speed             + '\n' +
+          'Timestamp: '         + position.timestamp                + '\n');
+};
+
+// onError Callback receives a PositionError object
+//
+function onError(error) {
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
+}
+
+*/
 
 
 function populateDB(data){
