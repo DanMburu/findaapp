@@ -1,0 +1,10 @@
+.ui-mobile, .ui-mobile body, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
+background:#1C9CD9;
+}
+.logo-preloader {
+  left: 50%;
+  margin-left: -46px;
+  margin-top: -46px;
+  position: absolute;
+  top: 50%;
+}
