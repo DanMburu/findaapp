@@ -9,7 +9,7 @@ $( document ).bind( "mobileinit", function() {
 $(document).on("pageshow", "#landing", function () { // When entering pagetwo
 // showLoader();
 setTimeout(function(){
-	//  window.location = $('#RootUrl').val();
+	  window.location = $('#RootUrl').val();
 	  $('.acivatemobile').trigger('click');
 	   $('.acivatemobile').click();
  }, 3000);
